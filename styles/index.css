@@ -7,7 +7,7 @@
 
 .SubHeading{
     margin-top: 0px;
-    font-family: "Courier New", Courier, monospace;
+    font-family: Ubuntu Mono;
 }
 
 #LogoSubHeading{
@@ -24,6 +24,7 @@
     background-color: blue;
     border: none;
     padding: 8px 15px;
+    text-align: center;
 }
 
 .SignInButton{
@@ -31,6 +32,7 @@
     background-color: blue;
     border: none;
     padding: 8px 15px;
+    text-align: center;
 }
 
 
