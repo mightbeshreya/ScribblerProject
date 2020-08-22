@@ -1,0 +1,36 @@
+.FontScribbler{
+    font-family: 'Montez', cursive;
+    color: blue;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.SubHeading{
+    margin-top: 0px;
+    font-family: "Courier New", Courier, monospace;
+}
+
+#LogoSubHeading{
+    float: left;
+}
+
+#SignButtons{
+    float:right;
+}
+
+.SignUpButton{
+    margin-right: 5px;
+    color: white;
+    background-color: blue;
+    border: none;
+    padding: 8px 15px;
+}
+
+.SignInButton{
+    color: white;
+    background-color: blue;
+    border: none;
+    padding: 8px 15px;
+}
+
+
