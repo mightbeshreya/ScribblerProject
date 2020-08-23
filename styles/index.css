@@ -1,38 +1,46 @@
-.FontScribbler{
-    font-family: 'Montez', cursive;
-    color: blue;
-    margin-bottom: 0px;
-    margin-top: 0px;
+body {
+    background: url("../images/background.jpg") no-repeat center center fixed;
+    background-size: cover;
 }
 
-.SubHeading{
-    margin-top: 0px;
-    font-family: Ubuntu Mono;
+.PostButtons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 270px;
 }
 
-#LogoSubHeading{
-    float: left;
+.AllPostsButton{
+    width: 100px;
+    color: black;
+    background-color: #ffdb58;
+    padding: 4px;
+    position: absolute;
+    left: 43%;
+    top: 50%;
 }
 
-#SignButtons{
-    float:right;
+.CreatePostButton{
+    width: 100px;
+    color: black;
+    background-color: #ffdb58;
+    padding: 4px;
+    position: absolute;
+    left: 53%;
+    top: 50%;
 }
 
-.SignUpButton{
-    margin-right: 5px;
-    color: white;
-    background-color: blue;
+textarea{
+    height: 300px;
+}
+
+.CreateSubmit{
+    margin-top: 30px;
+    background-color: #4CAF50;
+    color:white;
+    padding: 5px;
     border: none;
-    padding: 8px 15px;
-    text-align: center;
+    margin-bottom: 20px;
+    width: 100px;
+    margin-left: 230px;
 }
-
-.SignInButton{
-    color: white;
-    background-color: blue;
-    border: none;
-    padding: 8px 15px;
-    text-align: center;
-}
-
-

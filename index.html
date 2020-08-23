@@ -4,8 +4,12 @@
 <head>
     <!-- TODO: Include Font Awesome file here -->
     <!-- TODO: Include Google Fonts file here -->
+    <meta name="viewport" content="width=device-width, Initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Montez&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./styles/common.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
 </head>
 
 <body>
@@ -17,13 +21,106 @@
                 <h5 class="SubHeading">Explore, Imagine, Create</h5>
             </div>
             <div id="SignButtons">
-                <button type="button" class="SignUpButton">Sign Up</button>
-                <button type="button" class="SignInButton">Sign In</button>
+                <button type="button" class="SignUpButton" data-toggle="modal" data-target="#SignUpModal">Sign Up</button>
+                <div class="modal fade" id="SignUpModal" role="dialog">
+                    <div class="modal-dialog modal-sm modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Get Started</h4>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <label class="NameLabel">Name</label>
+                                    <input type="text" required="" placeholder="Enter your name"
+                                           oninvalid="this.setCustomValidity('Please fill out this field.')"
+                                           oninput="setCustomValidity('')">
+                                    <label>Username</label>
+                                    <input type="text" required="" placeholder="Enter your username"
+                                           oninvalid="this.setCustomValidity('Please fill out this field.')"
+                                           oninput="setCustomValidity('')">
+                                    <label>Password</label>
+                                    <input type="password" required="" placeholder="Enter your password"
+                                           oninvalid="this.setCustomValidity('Please fill out this field.')"
+                                           oninput="setCustomValidity('')">
+                                    <label>Confirm Password</label>
+                                    <input type="password" required="" placeholder="Re-enter your password"
+                                           oninvalid="this.setCustomValidity('Please fill out this field.')"
+                                           oninput="setCustomValidity('')">
+                                    <button type="submit" class="SignSubmit">Sign Up</button>
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <button type="button" class="SignInButton" data-toggle="modal" data-target="#SignInModal">Sign In</button>
+                <div class="modal fade" id="SignInModal" role="dialog">
+                    <div class="modal-dialog modal-sm modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Welcome Back!</h4>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <label class="NameLabel">Username</label>
+                                    <input type="text" required="" placeholder="Enter your name"
+                                           oninvalid="this.setCustomValidity('Please fill out this field.')"
+                                           oninput="setCustomValidity('')">
+                                    <label>Password</label>
+                                    <input type="password" required="" placeholder="Enter your password"
+                                           oninvalid="this.setCustomValidity('Please fill out this field.')"
+                                           oninput="setCustomValidity('')">
+                                    <button type="submit" class="SignSubmit">Sign In</button>
+                                </form>
+                                <div>
+                                    <p class="BottomText"><span class="BottomTextField">Not a member?</span><span class="HyperLinkField">
+                                    <a href="#SignUpModal" data-toggle="modal" data-dismiss="modal">Sign Up</a></span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
             </div>
         </div>
 
-    </header>
 
+    </header>
+    <div class="PostButtons">
+        <button type="button" id= "AllPostsHTML" class="AllPostsButton">All Posts</button>
+        <div id="CreateBtn">
+            <button type="button" class="CreatePostButton" data-toggle="modal" data-target="#CreatePost">Create Post</button>
+            <div class="modal fade" id="CreatePost" role="dialog">
+                <div class="modal-dialog modal-xl modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Pen Your Post</h4>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <label class="NameLabel">Title</label>
+                                <input type="text" required="" placeholder="Enter title of your post"
+                                       oninvalid="this.setCustomValidity('Please fill out this field.')"
+                                       oninput="setCustomValidity('')">
+                                <label>Contents</label>
+                                <textarea required="" placeholder="Enter the contents of your post" oninvalid="this.setCustomValidity('Please fill out this field.')"
+                                          oninput="setCustomValidity('')" ></textarea>
+                                <button type="submit" class="CreateSubmit">Create</button>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="scripts/index.js"></script>
 </body>
 
 </html>

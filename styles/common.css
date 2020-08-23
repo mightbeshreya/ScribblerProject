@@ -1,0 +1,107 @@
+.FontScribbler{
+    font-family: 'Montez', cursive;
+    color: blue;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.SubHeading{
+    margin-top: 0px;
+    font-family: Ubuntu Mono;
+}
+
+#LogoSubHeading{
+    float: left;
+    padding-left: 8px;
+}
+
+#SignButtons{
+    float:right;
+}
+
+.SignUpButton{
+    margin-right: 8px;
+    margin-top: 10px;
+    color: white;
+    background-color: blue;
+    border: none;
+    padding: 8px 15px;
+    text-align: center;
+}
+
+.SignInButton{
+    color: white;
+    background-color: blue;
+    border: none;
+    padding: 8px 15px;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.modal {
+    text-align: center;
+}
+
+.modal:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -4px; /* Adjusts for spacing */
+}
+
+.modal-dialog {
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.modal-header{
+    padding-left:0px!important;
+    padding-right: 0px!important;
+    padding-top: 0px!important;
+    padding-bottom: 5px!important;
+    margin: 15px 15px 0px 15px!important;
+}
+
+.NameLabel{
+    margin-top: 0px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+input{
+    padding:2%;
+    background-color: #F5F5F5;
+    border: 0;
+    margin: 5px;
+}
+
+label{
+    font-size: 15px;
+    margin: 10px 0;
+}
+
+.SignSubmit{
+    background-color: #4CAF50;
+    color: white;
+    border: 0px;
+    margin-top: 25px ;
+    margin-bottom: 15px;
+    padding: 5px 0px 5px 0px;
+    text-align: center;
+    justify-content: center;
+}
+
+.BottomText{
+    text-align: center;
+}
+
+.BottomTextField{
+    font-weight: bold;
+}
+
