@@ -32,6 +32,8 @@ body {
 
 textarea{
     height: 300px;
+    border:none;
+    background-color: #F5F5F5;
 }
 
 .CreateSubmit{
