@@ -1,3 +1,3 @@
 document.getElementById("AllPostsHTML").onclick = function () {
-    location.href = "./html/bloglist.html";
+    location.href = "./html/postslist.html";
 };
