@@ -41,5 +41,5 @@ function doComment() {
     textnode.append(newCommentText);
     node.append(textnode);
     document.getElementsByClassName("AllCommentsDisplay")[0].prepend(node);
-    document.getElementById("NewCommentText").value = "";
+    document.getElementById("NewCommentText!").value = "";
 }
