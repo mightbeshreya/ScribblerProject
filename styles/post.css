@@ -1,0 +1,125 @@
+body {
+    background-color: white!important;
+}
+
+#Heading{
+    margin-left: 60px;
+    margin-right: 60px;
+    border: thin solid white;
+}
+
+h4{
+    text-align: center;
+    font-weight: bold!important;
+    font-family: "Georgia"!important;
+}
+
+#Commenter{
+    font-size: 17px;
+    font-family: "Comic Sans MS";
+    text-align: left;
+    float: left;
+}
+
+.TopLine{
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+.EditSave{
+    float: right;
+    color: white;
+    background-color: #E3242B;
+    border:none;
+    padding: 5px;
+    width: 70px;
+}
+
+.FullExplanation{
+    margin-left: 60px;
+    margin-right: 60px;
+    text-align: justify;
+    border: thin solid white;
+}
+
+.Like{
+    float: left;
+    color: white;
+    background-color: #E3242B;
+    border:none;
+    padding: 5px;
+    width: 70px;
+}
+
+.LikeText{
+    margin-left: 60px;
+    margin-right: 60px;
+    display: flex;
+    flex-direction: column;
+}
+
+.BottomTextLike{
+    margin-top: 5px;
+    color: #969696;
+}
+
+
+.NewCommentBox{
+    margin-left: 60px;
+    margin-right: 60px;
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    justify-content: space-evenly;
+    height: 120px;
+}
+
+#NewCommentText{
+    width:60%;
+    height: 150px;
+    margin-bottom: 15px;
+}
+
+.CommentButton{
+    width:100px;
+    color: white;
+    background-color: #E3242B ;
+    border:none;
+    padding: 5px;
+}
+
+.AllCommentsBox{
+    margin-left: 60px;
+    margin-right: 60px;
+
+}
+
+h5{
+    margin-top:15px!important;
+    font-weight: bold!important;
+}
+
+.AllCommentsDisplay{
+    display: flex;
+    flex-direction: column;
+    width: 66%;
+}
+
+.IndividualComment{
+    background-color: lightgrey;
+    padding-top: 20px;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-bottom: 20px;
+    height: 80px;
+}
+
+.IndividualCommentText{
+    background-color: white;
+    padding-top: 8px;
+    padding-left: 8px;
+    text-align: left;
+    vertical-align: center;
+    height: 40px;
+}
+

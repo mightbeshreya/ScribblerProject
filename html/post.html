@@ -1,10 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Post</title>
+    <!-- TODO: Include Font Awesome file here -->
+    <!-- TODO: Include Google Fonts file here -->
+    <meta name="viewport" content="width=device-width, Initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Montez&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/post.css">
+    <link rel="stylesheet" href="../styles/common.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 </head>
 <body>
 
+<header>
+    <div>
+        <div id="LogoSubHeading">
+            <h1 class="FontScribbler">ScriBBler</h1>
+            <h5 class="SubHeading">Explore, Imagine, Create</h5>
+        </div>
+        <div id="SignButtons">
+            <button type="button" class="SignUpButton" data-toggle="modal" data-target="#SignUpModal">Sign Up</button>
+            <div class="modal fade" id="SignUpModal" role="dialog">
+                <div class="modal-dialog modal-sm modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Get Started</h4>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <label class="NameLabel">Name</label>
+                                <input type="text" required="" placeholder="Enter your name"
+                                       oninvalid="this.setCustomValidity('Please fill out this field.')"
+                                       oninput="setCustomValidity('')">
+                                <label>Username</label>
+                                <input type="text" required="" placeholder="Enter your username"
+                                       oninvalid="this.setCustomValidity('Please fill out this field.')"
+                                       oninput="setCustomValidity('')">
+                                <label>Password</label>
+                                <input type="password" required="" placeholder="Enter your password"
+                                       oninvalid="this.setCustomValidity('Please fill out this field.')"
+                                       oninput="setCustomValidity('')">
+                                <label>Confirm Password</label>
+                                <input type="password" required="" placeholder="Re-enter your password"
+                                       oninvalid="this.setCustomValidity('Please fill out this field.')"
+                                       oninput="setCustomValidity('')">
+                                <button type="submit" class="SignSubmit">Sign Up</button>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <button type="button" class="SignInButton" data-toggle="modal" data-target="#SignInModal">Sign In</button>
+            <div class="modal fade" id="SignInModal" role="dialog">
+                <div class="modal-dialog modal-sm modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Welcome Back!</h4>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <label class="NameLabel">Username</label>
+                                <input type="text" required="" placeholder="Enter your name"
+                                       oninvalid="this.setCustomValidity('Please fill out this field.')"
+                                       oninput="setCustomValidity('')">
+                                <label>Password</label>
+                                <input type="password" required="" placeholder="Enter your password"
+                                       oninvalid="this.setCustomValidity('Please fill out this field.')"
+                                       oninput="setCustomValidity('')">
+                                <button type="submit" class="SignSubmit">Sign In</button>
+                            </form>
+                            <div>
+                                <p class="BottomText"><span class="BottomTextField">Not a member?</span><span class="HyperLinkField">
+                                    <a href="#SignUpModal" data-toggle="modal" data-dismiss="modal">Sign Up</a></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</header>
+
+<br/><br/><br/><br/>
+
+<h4 id="Heading">Everything you should know about ‘module’ & ‘require’ in Node.js</h4>
+
+<div class="TopLine">
+    <p id="Commenter">Srishti Gupta</p>
+    <button class="EditSave" id="Edit" onclick="doEdit()">Edit  <span class='far fa-edit'></span></button>
+    <br/> <br/>
+</div>
+
+<div class="FullExplanation">
+    <p id="CompleteComment">Node.js treats each JavaScript file as a separate module.For instance, if you have a file containing
+        some code and this file is named xyz.js, then this file is treated as a module in Node, and you can say that you’ve created a module named xyz.
+        Let’s take an example to understand this better.
+        You have a file named circle.js which consists of the logic for calculating the area & the circumference of
+        a circle of a given radius, as given below: You can call circle.js file a module named circle.You might be
+        wondering why is there a need to have multiple modules? You could have just written all the code
+        in a single module. Well, it is very important to write modular code. By modular, I mean to say that
+        your code should be independent and should be loosely coupled. Imagine that there’s a large
+        application and you have all your code written in just one place, just one file. Too messy, right?
+        How does the code written inside a module run?
+        Before executing the code written inside a module, Node takes the entire code and encloses it within
+        a function wrapper. The syntax of this function wrapper is:
+        The function wrapper for the circle module will look like the one given below:
+        You can see that there is a function wrapper at the root level encompassing all the code written inside the circle module.
+        The entire code written inside a module is private to the module, unless explicitly stated (exported) otherwise.
+        This is the most significant advantage of having modules in Node.js. Even if you define a global variable in a
+        module using var, let or const keywords, the variables are scoped locally to the module rather than
+        being scoped globally. This happens because each module has a function wrapper of its own and the
+        code written inside one function is local to that function and cannot be accessed outside this function.
+        Imagine that there are two modules — A and B. The code written inside the module A is enclosed
+        within the function wrapper corresponding to the module A. Similar thing happens with the code
+        written inside the module B. Because the code pertaining to both the modules is enclosed within
+        different functions, these functions will not be able to access the code of each other.
+        (Remember each function in JavaScript has its own local scope?) This is the reason why module A
+        cannot access the code written inside module B and vice-versa.
+        The five parameters — exports, require, module, __filename, __dirname are available inside each
+        module in Node. Though these parameters are global to the code within a module yet they are local
+        to the module (because of the function wrapper as explained above). These parameters provide
+        valuable information related to a module. The module parameter (rather a keyword in a module in Node) refers to
+        the object representing the current module. exports is a key of the module object, the corresponding
+        value of which is an object. The default value of module.exports object is {} (empty object).
+        You can check this by logging the value of module keyword inside any module. Let’s check what is the
+        value of module parameter inside the circle module.
+    </p>
+</div>
+<div class="LikeText">
+    <button class="Like" onclick="doLike()"><span class='fa fa-thumbs-up'></span>  Like</button>
+    <p class="BottomTextLike">Be the first one to like this!</p>
+    <p id="BottomTextLikesNumber" hidden >0</p>
+</div>
+
+<div class="NewCommentBox">
+    <textarea id="NewCommentText" placeholder="Leave a comment..."></textarea>
+    <button class="CommentButton" onclick=doComment()>Comment</button>
+</div>
+
+<div class="AllCommentsBox">
+    <h5>All Comments</h5>
+    <div class="AllCommentsDisplay">
+        <div class="IndividualComment">
+            <p class="IndividualCommentText">Great post! Thanks!</p>
+        </div>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+<script src="../scripts/post.js"></script>
 </body>
 </html>
